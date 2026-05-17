@@ -2,10 +2,7 @@ export type Environment = "production" | "testing";
 
 export type MaybePromise<T> = T | Promise<T>;
 
-export type FetchLike = (
-  input: string | URL | Request,
-  init?: RequestInit,
-) => Promise<Response>;
+export type FetchLike = (input: string | URL | Request, init?: RequestInit) => Promise<Response>;
 
 export type Brand<T, TBrand extends string> = T & { readonly __brand: TBrand };
 

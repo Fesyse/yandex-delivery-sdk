@@ -103,6 +103,7 @@ export class HttpClient {
     const headers = new Headers(extra);
     headers.set("Authorization", `Bearer ${this.token}`);
     headers.set("Accept", headers.get("Accept") ?? "application/json");
+    headers.set("Accept-Language", "ru");
 
     if (request !== undefined && !headers.has("Content-Type")) {
       headers.set("Content-Type", "application/json");
